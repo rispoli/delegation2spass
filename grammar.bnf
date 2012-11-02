@@ -1,0 +1,25 @@
+<PROP_ATOM> ::= [a-zA-Z]+[a-zA-Z0-9]*
+
+<agent> ::= <PROP_ATOM>
+
+<atom> ::= <PROP_ATOM>
+
+<superscript> ::= D | P
+
+<sign> ::= + | -
+
+<p> ::= soa_<agent>,<atom>
+     |  (agent, (atom, atom), agent)^<superscript>_<sign>
+
+<pi> ::= <sign> <p>
+      |  <phi>?
+      |  <pi> || <pi>
+      |  <pi> ; <pi>
+
+<phi> ::= <p>
+       |  ( <phi> )
+       |  <phi> && <phi>
+       |  not <phi>
+       |  [ <pi> ] ( <phi> )
+
+<start> ::= <phi>

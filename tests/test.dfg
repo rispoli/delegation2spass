@@ -1,0 +1,40 @@
+begin_problem(problem_name).
+
+list_of_descriptions.
+
+	name({*Problem's name*}).
+	author({*Author*}).
+	status(unsatisfiable). % or satisfiable or unknown
+	description({*Description*}).
+
+end_of_list.
+
+list_of_symbols.
+
+	functions[(i, 0), (j, 0), (q, 0), (a, 0), (o, 0)].
+	predicates[(soa, 2), (p_p, 4), (p_d, 4), (n_p, 4), (n_d, 4)].
+	sorts[agent].
+
+end_of_list.
+
+list_of_declarations.
+
+	agent(i).
+	agent(j).
+	agent(q).
+
+end_of_list.
+
+list_of_formulae(axioms).
+
+	
+
+end_of_list.
+
+list_of_formulae(conjectures).
+
+	formula(and(implies(p_p(i, a, o, j), true), implies(not(p_p(i, a, o, j)), false))).
+
+end_of_list.
+
+end_problem.

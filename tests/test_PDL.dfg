@@ -1,0 +1,48 @@
+begin_problem(problem_name).
+
+list_of_descriptions.
+
+	name({*Problem's name*}).
+	author({*Author*}).
+	status(unsatisfiable). % or satisfiable or unknown
+	description({*Description*}).
+
+end_of_list.
+
+list_of_symbols.
+
+	functions[(i, 0), (z, 0), (j, 0), (k, 0), (w, 0), (q,0)].
+	predicates[(soa,1),(p_p, 2), (p_d, 2), (n_p, 2), (n_d, 2)].
+	sorts[agent].
+
+end_of_list.
+
+list_of_declarations.
+
+	agent(i).
+	agent(z).
+	agent(j).
+	agent(k).
+	agent(w).
+	agent(q).
+
+end_of_list.
+
+list_of_formulae(axioms).
+
+	%%Define the source of authority
+	formula(soa(i)).
+	%%Delegation Graph
+	formula(p_p(i,z)).
+	formula(p_d(i,z)).		
+	%formula(forall([world(w20)], implies(R(alice, 0, w20), I(df1, w20))), 12).
+
+end_of_list.
+
+list_of_formulae(conjectures).
+
+	formula(p_p(i,z)).
+
+end_of_list.
+
+end_problem.

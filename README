@@ -1,0 +1,48 @@
+                Welcome to delegation2spass!
+                ===========================
+
+This is the generic README file for all delegation2spass distributions, so your
+downloaded package may only contain a subset of what is described here.
+
+This software was developed and tested using Racket (v5.0.1).
+
+
+                Important Files
+                ===============
+
+AUTHORS                 all authors that contributed to delegation2spass
+
+delegation2spass[.exe]  (if present) executable binary
+
+delegation2spass_dist   (if present) folder containing a redistributable version
+                        of the tool does not need Racket installed to run
+
+delegation2spass.scm    source code of the tool
+
+grammar.bnf             a BNF-like representation of the grammar the tool
+                        recognizes
+
+Makefile                unix makefile for compiling the tool
+
+README                  this file
+
+UNLICENSE               the license under which this software is released
+
+
+                Usage
+                =====
+
+Once the tool is compiled it can be run with the following command:
+
+    delegation2spass input-file > output-file
+
+where input-file is a properly written file according to the grammar in
+grammar.bnf (see examples) and output-file is the translation ready to be fed to
+SPASS.
+
+                Documentation
+                =============
+
+Further documentation on the options of the tool can be found with the command:
+
+    delegation2spass --help
